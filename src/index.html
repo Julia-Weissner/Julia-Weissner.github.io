@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
 <body>                            
   <div class="root">
     <header class="header root__section">
-      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+      <img src="<%=require('./images/logo.svg').default%>" alt="mesto logo" class="logo">
     </header>
     <div class="profile root__section">
       <div class="user-info">
@@ -28,7 +28,7 @@
     
     <div class="popup">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close">
+        <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close">
         <h3 class="popup__title">Новое место</h3>
         <form id="form-content" class="popup__form" name="new" novalidate>
             <input id="title" type="text" name="name" class="popup__input popup__input_type_name" required placeholder="Название" minlength="2" maxlength="30">
@@ -44,7 +44,7 @@
 
     <div class="popup popup_profile">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close popup__close_profile">
+        <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close popup__close_profile">
         <h3 class="popup__title">Редактировать профиль</h3>
         <form id="form-profile" class="popup__form" name="profile" novalidate>
            
@@ -62,16 +62,13 @@
     <div class="popup popup_image">   
       <div class="popup__content popup__content_image">
         <img class="popup__big-image">
-        <img src="./images/close.svg" alt="" class="popup__close popup__close_image">
+        <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close popup__close_image">
       </div>
     </div>
   </div>
- 
-  <script type="module" src="index.js"></script> 
+
+  <script type="module" src="<%= htmlWebpackPlugin.files.js %>"></script>
   
+
 </body>
 </html>
-
-
-
-

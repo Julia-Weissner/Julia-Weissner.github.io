@@ -5,6 +5,7 @@ import Popup from './popup';
 import PopupContent from './popup-content';
 import FormValidator from './form-validator';
 import Api from './api';
+import './pages/index.css'
 
 (function() {
 /* Переменные: */
