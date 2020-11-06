@@ -8,7 +8,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
-    entry: path.resolve(__dirname, 'src/index.js'),   // { main: './src/index.js' },
+    entry: path.resolve(__dirname, 'src/index.js'),
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[chunkhash].js'
@@ -33,7 +33,7 @@ module.exports = {
             use: {
                 loader: 'file-loader',
                 options: {                                    
-                    name: './vendor/[name].[ext]'            // loader: 'file-loader?name=./vendor/[name].[ext]'
+                    name: './vendor/[name].[ext]'
                 }
             }
         }, 
@@ -51,7 +51,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({  
-            filename: '[name].[contenthash].css',     //filename: 'style.[contenthash].css'
+            filename: '[name].[contenthash].css',
           }),    
           
         new OptimizeCssAssetsPlugin({
