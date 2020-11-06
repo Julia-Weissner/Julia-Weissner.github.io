@@ -19,7 +19,6 @@ const profileButton = document.querySelector('.profile__button');
 const popupCloseButton = document.querySelector('.popup__close');
 const popupCloseButtonProfile = document.querySelector('.popup__close_profile');
 const popupCloseButtonImage = document.querySelector('.popup__close_image');
-const popupContentImage = document.querySelector('.popup__content_image');
 const submitContent = document.querySelector('#submit-content');
 const userInfoName = document.querySelector('.user-info__name');
 const userInfoJob = document.querySelector('.user-info__job');
@@ -43,7 +42,7 @@ const createCard = function (name, link) {
 const cardList = new Cardlist (list, createCard);
 
 const config = {
-  baseUrl: 'https://nomoreparties.co/cohort12',
+  baseUrl: `${(NODE_ENV==='development') ? 'http://nomoreparties.co/cohort12' : 'https://nomoreparties.co/cohort12'}`,   // baseUrl: 'https://nomoreparties.co/cohort12',
   headers: {
     authorization: '297d2841-1d9b-430e-8d64-80832c30364e',
     'Content-Type': 'application/json'
