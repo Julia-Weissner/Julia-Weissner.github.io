@@ -1,3 +1,6 @@
+.idea
+node_modules/
+dist/
 
 # Created by https://www.toptal.com/developers/gitignore/api/osx
 # Edit at https://www.toptal.com/developers/gitignore?templates=osx
@@ -32,3 +35,4 @@ Temporary Items
 .apdisk
 
 # End of https://www.toptal.com/developers/gitignore/api/osx
+node_modules

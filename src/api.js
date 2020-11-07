@@ -1,7 +1,7 @@
 export default class Api {
     constructor(config) {
-      this.baseUrl = config.baseUrl;
-      this.headers = config.headers;
+        this.baseUrl = config.baseUrl;
+        this.headers = config.headers;
     }
 
 
@@ -9,29 +9,29 @@ export default class Api {
         return fetch(`${this.baseUrl}/users/me`, {
             headers: this.headers
         })
-        
-    
-        .then(res => {
-             if (res.ok) {
-              return res.json();
-            }
-            return Promise.reject(`Ошибка: ${res.status}`);
-          })  
-      }
+
+
+            .then(res => {
+                if (res.ok) {
+                    return res.json();
+                }
+                return Promise.reject(`Ошибка: ${res.status}`);
+            })
+    }
 
 
     getInitialCards() {
         return fetch(`${this.baseUrl}/cards`, {
             headers: this.headers
         })
-      
-        .then(res => {
-            if (res.ok) {
-              return res.json();
-            }
-            return Promise.reject(`Ошибка: ${res.status}`);
-          }) 
-      }
+
+            .then(res => {
+                if (res.ok) {
+                    return res.json();
+                }
+                return Promise.reject(`Ошибка: ${res.status}`);
+            })
+    }
 
 
     editProfile(infoName, infoAbout) {
@@ -41,15 +41,15 @@ export default class Api {
             body: JSON.stringify({
                 name: infoName,
                 about: infoAbout
+            })
         })
-    })
-       .then(res => {
-          if (res.ok) {
-            return res.json();
-          }
-          return Promise.reject(`Ошибка: ${res.status}`);
-        }) 
-      }
+            .then(res => {
+                if (res.ok) {
+                    return res.json();
+                }
+                return Promise.reject(`Ошибка: ${res.status}`);
+            })
+    }
 
 
     editCardList(cardName, cardLink) {
@@ -59,15 +59,15 @@ export default class Api {
             body: JSON.stringify({
                 name: cardName,
                 link: cardLink
+            })
         })
-    })
-    
-        .then(res => {
-          if (res.ok) {
-            return res.json();
-          }
-          return Promise.reject(`Ошибка: ${res.status}`);
-        }) 
-      }
-      
+
+            .then(res => {
+                if (res.ok) {
+                    return res.json();
+                }
+                return Promise.reject(`Ошибка: ${res.status}`);
+            })
+    }
+
 }

@@ -1,3 +1,4 @@
+import Popup from './popup';
 export default class PopupContent extends Popup {
     constructor(element, closeElement, form) {
         super(element, closeElement);
