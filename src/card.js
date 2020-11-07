@@ -7,7 +7,7 @@ export default class Card {
         this.like = this.like.bind(this);
         this.remove = this.remove.bind(this);
         this.openImage = this.openImage.bind(this);
-        
+
     }
 
     create() {
@@ -45,17 +45,17 @@ export default class Card {
         this.cardElement.parentNode.removeChild(this.cardElement);
     }
 
-    openImage(evt) { 
+    openImage(evt) {
         this.openImageCallback(evt.target.style.backgroundImage.slice(5, -2))
     }
 
     removeEventListeners() {
-       this.cardElement.querySelector('.place-card__image').removeEventListener('click', this.openImage)
+        this.cardElement.querySelector('.place-card__image').removeEventListener('click', this.openImage)
     }
 
     setEventListeners() {
         this.cardElement.querySelector('.place-card__like-icon').addEventListener('click', this.like);
-        this.cardElement.querySelector('.place-card__delete-icon').addEventListener('click', this.remove); 
+        this.cardElement.querySelector('.place-card__delete-icon').addEventListener('click', this.remove);
         this.cardElement.querySelector('.place-card__image').addEventListener('click', this.openImage);
     }
 
